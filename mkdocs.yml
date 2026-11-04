@@ -82,7 +82,10 @@ nav:
       - 4. 餐飲業簡介: topic2/04-food-beverage.md
       - 5. 餐飲服務原理: topic2/05-fb-service-principles.md
       - 6. 食物安全及個人衞生: topic2/06-food-safety.md
-  - 課題三 地理名勝: []
+  - 課題三 地理名勝:
+      - 1. 基本世界地理概念: topic3/01-world-geography.md
+      - 2. 旅遊景點: topic3/02-attractions.md
+      - 3. 主要旅遊區域: topic3/03-major-regions.md
   - 課題四 客務關係及服務:
       - 2. 顧客服務概念: topic4/02-customer-service-concepts.md
   - 課題五 趨勢及議題: []
