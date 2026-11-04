@@ -81,3 +81,8 @@
   #print-site-page section.print-page h1 { font-size: 20pt !important; color: #00695c !important; font-weight: 700 !important; }
   #print-site-page section.md-section > h1 { font-size: 12pt !important; color: #888 !important; }
 }
+
+@media print {
+  .md-typeset mark { background: #ffe082 !important; color: #000 !important; }
+  .md-typeset .freq { font-size: 9pt; }
+}

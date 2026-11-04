@@ -67,5 +67,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - 首頁: index.md
-  - 必修部分:
-      - 1. 旅遊導論: compulsory/01-intro-tourism.md
+  - 課題一 旅遊導論: []
+  - 課題二 款待導論: []
+  - 課題三 地理名勝: []
+  - 課題四 客務關係及服務:
+      - 2. 顧客服務概念: topic4/02-customer-service-concepts.md
+  - 課題五 趨勢及議題: []
