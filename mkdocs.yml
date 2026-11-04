@@ -67,7 +67,10 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - 首頁: index.md
-  - 課題一 旅遊導論: []
+  - 課題一 旅遊導論:
+      - 2. 旅行、旅遊及旅客的定義: topic1/02-travel-tourism-tourists.md
+      - 3. 旅遊的動機與旅客流量: topic1/03-motivation-tourist-flow.md
+      - 4. 旅遊產品：旅遊景點與目的地: topic1/04-tourism-products-destinations.md
   - 課題二 款待導論: []
   - 課題三 地理名勝: []
   - 課題四 客務關係及服務:
