@@ -101,3 +101,9 @@
   /* 流程圖限高，可與下文同頁 */
   .md-typeset .mermaid { width: 62%; margin: 0 auto; }
 }
+
+/* 列印全部：目錄壓縮至一頁 */
+@media print {
+  #print-site-page .print-page-toc-nav, #print-site-page .print-page-toc-nav li { font-size: 9pt !important; line-height: 1.25 !important; margin: 0 !important; }
+  #print-site-page .print-page-toc-nav ul { margin-top: 0 !important; margin-bottom: 0 !important; }
+}
