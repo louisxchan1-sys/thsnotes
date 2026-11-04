@@ -86,3 +86,17 @@
   .md-typeset mark { background: #ffe082 !important; color: #000 !important; }
   .md-typeset .freq { font-size: 9pt; }
 }
+
+/* 分頁：小節整組不拆開；h2 標題與下一組同頁 */
+@media print {
+  .md-typeset .print-keep { break-inside: avoid; page-break-inside: avoid; }
+  .md-typeset .print-keep--h2 { break-after: avoid; page-break-after: avoid; }
+  .md-typeset .print-keep--long { break-inside: auto; page-break-inside: auto; }
+  .md-typeset .print-keep-head { break-inside: avoid; page-break-inside: avoid; }
+  /* 分頁標籤組不加外框，避免框跨頁變成空框 */
+  .md-typeset .tabbed-set { border: none !important; padding: 0 !important; }
+  .md-typeset .tabbed-block { border-left: 2pt solid #00897b; padding-left: 8pt; }
+  .md-typeset .print-keep-head > .tabbed-set:only-child, .md-typeset .print-keep-head .tabbed-set { break-inside: auto; }
+  /* 流程圖限高，可與下文同頁 */
+  .md-typeset .mermaid { width: 62%; margin: 0 auto; }
+}

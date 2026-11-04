@@ -25,3 +25,6 @@
 .md-typeset .admonition.trap, .md-typeset details.trap { border-color: #c62828; }
 .md-typeset .trap > .admonition-title, .md-typeset .trap > summary { background-color: rgba(198,40,40,.1); }
 .md-typeset .trap > .admonition-title::before, .md-typeset .trap > summary::before { background-color: #c62828; -webkit-mask-image: var(--md-admonition-icon--trap); mask-image: var(--md-admonition-icon--trap); }
+
+/* 供 print.js 量度高度用 */
+.print-measure .md-typeset .tabbed-content > .tabbed-block { display: block !important; }
