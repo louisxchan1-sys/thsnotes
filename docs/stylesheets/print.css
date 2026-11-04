@@ -87,12 +87,13 @@
   .md-typeset .freq { font-size: 9pt; }
 }
 
-/* 分頁：小節整組不拆開；h2 標題與下一組同頁 */
+/* 分頁：標題與首段同頁；表格可跨頁但每行不拆 */
 @media print {
-  .md-typeset .print-keep { break-inside: avoid; page-break-inside: avoid; }
-  .md-typeset .print-keep--h2 { break-after: avoid; page-break-after: avoid; }
-  .md-typeset .print-keep--long { break-inside: auto; page-break-inside: auto; }
-  .md-typeset .print-keep-head { break-inside: avoid; page-break-inside: avoid; }
+  .md-typeset .print-keep-head { break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+  .md-typeset table:not([class]), .md-typeset .md-typeset__table, .md-typeset .md-typeset__scrollwrap { break-inside: auto !important; page-break-inside: auto !important; }
+  .md-typeset tr { break-inside: avoid; page-break-inside: avoid; }
+  .md-typeset thead { display: table-header-group; }
+  .md-typeset .tabbed-set { break-inside: auto !important; }
   /* 分頁標籤組不加外框，避免框跨頁變成空框 */
   .md-typeset .tabbed-set { border: none !important; padding: 0 !important; }
   .md-typeset .tabbed-block { border-left: 2pt solid #00897b; padding-left: 8pt; }

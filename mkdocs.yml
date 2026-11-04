@@ -68,9 +68,13 @@ markdown_extensions:
 nav:
   - 首頁: index.md
   - 課題一 旅遊導論:
+      - 1. 「旅遊」簡介: topic1/01-intro.md
       - 2. 旅行、旅遊及旅客的定義: topic1/02-travel-tourism-tourists.md
       - 3. 旅遊的動機與旅客流量: topic1/03-motivation-tourist-flow.md
       - 4. 旅遊產品：旅遊景點與目的地: topic1/04-tourism-products-destinations.md
+      - 5. 旅遊業中的不同界別及其角色: topic1/05-sectors.md
+      - 6. 本地旅遊業發展: topic1/06-local-tourism.md
+      - 7. 旅遊業的影響: topic1/07-impacts.md
   - 課題二 款待導論: []
   - 課題三 地理名勝: []
   - 課題四 客務關係及服務:
