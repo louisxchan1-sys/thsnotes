@@ -75,7 +75,13 @@ nav:
       - 5. 旅遊業中的不同界別及其角色: topic1/05-sectors.md
       - 6. 本地旅遊業發展: topic1/06-local-tourism.md
       - 7. 旅遊業的影響: topic1/07-impacts.md
-  - 課題二 款待導論: []
+  - 課題二 款待導論:
+      - 1. 款待業: topic2/01-hospitality-industry.md
+      - 2. 住宿業簡介: topic2/02-accommodation.md
+      - 3. 酒店運作簡介: topic2/03-hotel-operations.md
+      - 4. 餐飲業簡介: topic2/04-food-beverage.md
+      - 5. 餐飲服務原理: topic2/05-fb-service-principles.md
+      - 6. 食物安全及個人衞生: topic2/06-food-safety.md
   - 課題三 地理名勝: []
   - 課題四 客務關係及服務:
       - 2. 顧客服務概念: topic4/02-customer-service-concepts.md
