@@ -1,0 +1,10 @@
+/* 自訂提示框：考試重點 / 關鍵詞 */
+:root { --md-admonition-icon--exam: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2 1 7l11 5 9-4.09V17h2V7M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>');
+        --md-admonition-icon--keyword: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.65-4A5.99 5.99 0 0 0 7 6a6 6 0 0 0 0 12 5.99 5.99 0 0 0 5.65-4H17v4h4v-4h2v-4z"/></svg>'); }
+.md-typeset .admonition.exam, .md-typeset details.exam { border-color: #e65100; }
+.md-typeset .exam > .admonition-title, .md-typeset .exam > summary { background-color: rgba(230,81,0,.1); }
+.md-typeset .exam > .admonition-title::before, .md-typeset .exam > summary::before { background-color: #e65100; -webkit-mask-image: var(--md-admonition-icon--exam); mask-image: var(--md-admonition-icon--exam); }
+.md-typeset .admonition.keyword, .md-typeset details.keyword { border-color: #6a1b9a; }
+.md-typeset .keyword > .admonition-title, .md-typeset .keyword > summary { background-color: rgba(106,27,154,.1); }
+.md-typeset .keyword > .admonition-title::before, .md-typeset .keyword > summary::before { background-color: #6a1b9a; -webkit-mask-image: var(--md-admonition-icon--keyword); mask-image: var(--md-admonition-icon--keyword); }
+.md-typeset table:not([class]) th { background-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }
