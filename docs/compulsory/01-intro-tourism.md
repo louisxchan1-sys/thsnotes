@@ -26,7 +26,7 @@
 ### 旅客的分類
 
 ```mermaid
-graph TD
+graph LR
     A[旅行者 Traveller] --> B[訪客 Visitor]
     A --> C[其他旅行者<br/>例如通勤者、移民、外交人員]
     B --> D["過夜旅客 Tourist<br/>停留至少一晚"]

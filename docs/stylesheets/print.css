@@ -1,0 +1,83 @@
+/* ===== 列印樣式（A4） ===== */
+@page {
+  size: A4;
+  margin: 18mm 16mm 20mm;
+}
+
+@media print {
+  /* 強制淺色及保留背景色 */
+  :root, [data-md-color-scheme] {
+    --md-default-bg-color: #fff;
+    --md-default-fg-color: #000;
+    --md-typeset-color: #111;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* 隱藏網頁元素 */
+  .md-header, .md-tabs, .md-sidebar, .md-footer, .md-top,
+  .md-content__button, .headerlink, .md-source, .md-search { display: none !important; }
+  .md-main__inner, .md-content__inner { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+  .md-content { max-width: none !important; margin: 0 !important; }
+
+  /* 字體 */
+  body, .md-typeset { font-size: 10.5pt; line-height: 1.6; }
+  .md-typeset h1 { font-size: 20pt; color: #00695c; font-weight: 700; margin-bottom: .6em; }
+  .md-typeset h2 { font-size: 14pt; color: #00695c; border-bottom: 1.5pt solid #00897b; padding-bottom: 2pt; margin-top: 1.4em; }
+  .md-typeset h3 { font-size: 12pt; }
+  .md-typeset hr { display: none; }
+
+  /* 分頁控制 */
+  .md-typeset h1, .md-typeset h2, .md-typeset h3 { break-after: avoid; page-break-after: avoid; }
+  .md-typeset .admonition, .md-typeset details, .md-typeset table,
+  .md-typeset .mermaid, .md-typeset .grid.cards > ul > li, .md-typeset blockquote,
+  .md-typeset .tabbed-block { break-inside: avoid; page-break-inside: avoid; }
+  .md-typeset p, .md-typeset li { orphans: 3; widows: 3; }
+
+  /* 表格 */
+  .md-typeset table:not([class]) { font-size: 9.5pt; display: table; width: 100%; border: 1pt solid #999; }
+  .md-typeset table:not([class]) td, .md-typeset table:not([class]) th { border: .5pt solid #bbb; padding: 4pt 8pt; }
+  .md-typeset__scrollwrap, .md-typeset__table { overflow: visible !important; display: block; }
+
+  /* 提示框：較細的邊框 */
+  .md-typeset .admonition, .md-typeset details { box-shadow: none; border-width: 1pt; font-size: 10pt; }
+
+  /* 分頁內容：全部展開，標題變成小標 */
+  .md-typeset .tabbed-labels { display: none; }
+  .md-typeset .tabbed-set { border: 1pt solid #ccc; border-radius: 4pt; padding: 4pt 10pt; }
+  .md-typeset .tabbed-content { display: block !important; }
+  .md-typeset .tabbed-block { display: block !important; margin: 6pt 0; }
+  .md-typeset .tabbed-block::before { content: attr(data-print-label); display: block; font-weight: 700; color: #00695c; }
+
+  /* 摺疊（自我測驗答案）：印出時展開 */
+  .md-typeset details > :not(summary) { display: block !important; }
+  .md-typeset details > summary::after { display: none; }
+
+  /* 卡片並排 */
+  .md-typeset .grid.cards > ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; }
+  .md-typeset .grid.cards > ul > li { border: 1pt solid #ccc; box-shadow: none; }
+
+  /* 流程圖不超出頁寬 */
+  .md-typeset .mermaid { text-align: center; }
+
+  /* 每章由新一頁開始（列印全部時） */
+  #print-site-page section.print-page { break-before: page; page-break-before: always; }
+  /* 「必修部分」等分部標題不獨佔一頁，與第一章同頁 */
+  #print-site-page section.md-section > h1 + section.print-page { break-before: auto; page-break-before: auto; }
+  #print-site-page section.md-section h1 { font-size: 13pt; color: #888; margin: 0 0 4pt; }
+  #print-site-page .print-site-enumerate-headings { counter-reset: none; }
+
+  /* 封面 */
+  .print-cover { height: 240mm; display: flex; flex-direction: column; justify-content: center; text-align: center; break-after: page; }
+  .print-cover h1 { font-size: 30pt !important; color: #00695c; }
+  .print-cover__sub { color: #555; letter-spacing: .1em; }
+  .print-cover__line { margin-top: 40mm; font-size: 12pt; }
+}
+
+/* 只在列印時顯示 / 只在畫面顯示 */
+.print-only { display: none; }
+@media print { .print-only { display: block; } .screen-only { display: none !important; } }
+
+@media print {
+  #print-site-page section.print-page h1 { font-size: 20pt !important; color: #00695c !important; font-weight: 700 !important; }
+  #print-site-page section.md-section > h1 { font-size: 12pt !important; color: #888 !important; }
+}

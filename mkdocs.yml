@@ -24,6 +24,25 @@ theme:
       toggle: {icon: material/weather-sunny, name: 淺色模式}
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/print.css
+extra_javascript:
+  - javascripts/print.js
+plugins:
+  - search
+  - print-site:            # 必須放最後
+      add_to_navigation: true
+      exclude:
+        - index.md
+      print_page_title: 列印全部筆記
+      add_print_site_banner: false
+      add_table_of_contents: true
+      toc_title: 目錄
+      toc_depth: 2
+      add_full_urls: false
+      enumerate_headings: false
+      enumerate_figures: false
+      add_cover_page: true
+      cover_page_template: overrides/print_cover.tpl
 markdown_extensions:
   - admonition
   - attr_list
@@ -31,7 +50,9 @@ markdown_extensions:
   - tables
   - def_list
   - abbr
-  - toc: {permalink: true}
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
