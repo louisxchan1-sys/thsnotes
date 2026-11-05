@@ -67,5 +67,37 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - 首頁: index.md
-  - 必修部分:
-      - 1. 旅遊導論: compulsory/01-intro-tourism.md
+  - 課題一 旅遊導論:
+      - 1. 「旅遊」簡介: topic1/01-intro.md
+      - 2. 旅行、旅遊及旅客的定義: topic1/02-travel-tourism-tourists.md
+      - 3. 旅遊的動機與旅客流量: topic1/03-motivation-tourist-flow.md
+      - 4. 旅遊產品：旅遊景點與目的地: topic1/04-tourism-products-destinations.md
+      - 5. 旅遊業中的不同界別及其角色: topic1/05-sectors.md
+      - 6. 本地旅遊業發展: topic1/06-local-tourism.md
+      - 7. 旅遊業的影響: topic1/07-impacts.md
+      - 8. 會議、獎勵及展覽業務（補充）: topic1/08-mice.md
+  - 課題二 款待導論:
+      - 1. 款待業: topic2/01-hospitality-industry.md
+      - 2. 住宿業簡介: topic2/02-accommodation.md
+      - 3. 酒店運作簡介: topic2/03-hotel-operations.md
+      - 4. 餐飲業簡介: topic2/04-food-beverage.md
+      - 5. 餐飲服務原理: topic2/05-fb-service-principles.md
+      - 6. 食物安全及個人衞生: topic2/06-food-safety.md
+  - 課題三 地理名勝:
+      - 1. 基本世界地理概念: topic3/01-world-geography.md
+      - 2. 旅遊景點: topic3/02-attractions.md
+      - 3. 主要旅遊區域: topic3/03-major-regions.md
+      - 4. 主題公園（補充）: topic3/04-theme-parks.md
+  - 課題四 客務關係及服務:
+      - 1. 介紹客務關係及服務: topic4/01-intro-customer-service.md
+      - 2. 顧客服務概念: topic4/02-customer-service-concepts.md
+      - 3. 公司的顧客服務政策: topic4/03-service-policy.md
+      - 4. 招待不易取悅的顧客: topic4/04-difficult-customers.md
+      - 5. 與顧客溝通: topic4/05-communication.md
+  - 課題五 趨勢及議題:
+      - 1. 可持續發展的旅遊業: topic5/01-sustainable-tourism.md
+      - 2. 全球化引起的議題: topic5/02-globalisation.md
+      - 3. 趨勢：經濟方面: topic5/03-economic-trends.md
+      - 4. 趨勢：社會文化方面: topic5/04-sociocultural-trends.md
+      - 5. 趨勢：環境方面: topic5/05-environmental-trends.md
+      - 6. 趨勢：科技方面: topic5/06-technology-trends.md

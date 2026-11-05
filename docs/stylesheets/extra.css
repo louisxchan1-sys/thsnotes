@@ -8,3 +8,21 @@
 .md-typeset .keyword > .admonition-title, .md-typeset .keyword > summary { background-color: rgba(106,27,154,.1); }
 .md-typeset .keyword > .admonition-title::before, .md-typeset .keyword > summary::before { background-color: #6a1b9a; -webkit-mask-image: var(--md-admonition-icon--keyword); mask-image: var(--md-admonition-icon--keyword); }
 .md-typeset table:not([class]) th { background-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }
+
+/* 學科詞彙：==詞彙== */
+.md-typeset mark { background: rgba(255, 213, 79, .55); color: inherit; font-weight: 700; padding: 0 .15em; border-radius: 2px; box-shadow: none; }
+[data-md-color-scheme="slate"] .md-typeset mark { background: rgba(255, 193, 7, .35); }
+
+/* 出題頻率列 */
+.md-typeset .freq { font-size: .78rem; color: var(--md-default-fg-color--light); border-left: 3px solid #e65100; padding-left: .6em; }
+
+/* 拿分要訣 / 易錯 */
+:root { --md-admonition-icon--score: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21z"/></svg>');
+        --md-admonition-icon--trap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>'); }
+.md-typeset .admonition.score, .md-typeset details.score { border-color: #2e7d32; }
+.md-typeset .score > .admonition-title, .md-typeset .score > summary { background-color: rgba(46,125,50,.1); }
+.md-typeset .score > .admonition-title::before, .md-typeset .score > summary::before { background-color: #2e7d32; -webkit-mask-image: var(--md-admonition-icon--score); mask-image: var(--md-admonition-icon--score); }
+.md-typeset .admonition.trap, .md-typeset details.trap { border-color: #c62828; }
+.md-typeset .trap > .admonition-title, .md-typeset .trap > summary { background-color: rgba(198,40,40,.1); }
+.md-typeset .trap > .admonition-title::before, .md-typeset .trap > summary::before { background-color: #c62828; -webkit-mask-image: var(--md-admonition-icon--trap); mask-image: var(--md-admonition-icon--trap); }
+

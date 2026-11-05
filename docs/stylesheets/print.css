@@ -81,3 +81,29 @@
   #print-site-page section.print-page h1 { font-size: 20pt !important; color: #00695c !important; font-weight: 700 !important; }
   #print-site-page section.md-section > h1 { font-size: 12pt !important; color: #888 !important; }
 }
+
+@media print {
+  .md-typeset mark { background: #ffe082 !important; color: #000 !important; }
+  .md-typeset .freq { font-size: 9pt; }
+}
+
+/* 分頁：標題與首段同頁；表格可跨頁但每行不拆 */
+@media print {
+  .md-typeset .print-keep-head { break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+  .md-typeset table:not([class]), .md-typeset .md-typeset__table, .md-typeset .md-typeset__scrollwrap { break-inside: auto !important; page-break-inside: auto !important; }
+  .md-typeset tr { break-inside: avoid; page-break-inside: avoid; }
+  .md-typeset thead { display: table-header-group; }
+  .md-typeset .tabbed-set { break-inside: auto !important; }
+  /* 分頁標籤組不加外框，避免框跨頁變成空框 */
+  .md-typeset .tabbed-set { border: none !important; padding: 0 !important; }
+  .md-typeset .tabbed-block { border-left: 2pt solid #00897b; padding-left: 8pt; }
+  .md-typeset .print-keep-head > .tabbed-set:only-child, .md-typeset .print-keep-head .tabbed-set { break-inside: auto; }
+  /* 流程圖限高，可與下文同頁 */
+  .md-typeset .mermaid { width: 62%; margin: 0 auto; }
+}
+
+/* 列印全部：目錄壓縮至一頁 */
+@media print {
+  #print-site-page .print-page-toc-nav, #print-site-page .print-page-toc-nav li { font-size: 9pt !important; line-height: 1.25 !important; margin: 0 !important; }
+  #print-site-page .print-page-toc-nav ul { margin-top: 0 !important; margin-bottom: 0 !important; }
+}

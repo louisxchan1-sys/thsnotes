@@ -1,0 +1,53 @@
+/* ===== 概念卡：A4 直向、每個概念一頁、正文 14pt ===== */
+.md-typeset mark { background: rgba(255, 213, 79, .55); color: inherit; font-weight: 700; padding: 0 .1em; border-radius: 2px; }
+.md-typeset .freq { color: #666; font-size: .8em; border-left: 3px solid #e65100; padding-left: .5em; margin: 0 0 .6em; }
+.md-typeset .admonition.score { border-color: #2e7d32; }
+.md-typeset .score > .admonition-title { background-color: rgba(46,125,50,.1); }
+.md-typeset .score > .admonition-title::before { background-color: #2e7d32; }
+.md-typeset .admonition.trap { border-color: #c62828; }
+.md-typeset .trap > .admonition-title { background-color: rgba(198,40,40,.1); }
+.md-typeset .trap > .admonition-title::before { background-color: #c62828; }
+.md-typeset table:not([class]) th { background-color: #00897b; color: #fff; }
+
+@page { size: A4; margin: 14mm 14mm 14mm; }
+
+@media print {
+  :root, [data-md-color-scheme] { --md-default-bg-color: #fff; --md-default-fg-color: #000; --md-typeset-color: #111; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .md-header, .md-tabs, .md-sidebar, .md-footer, .md-top, .md-content__button, .headerlink, .md-source, .md-search { display: none !important; }
+  .md-main__inner, .md-content__inner, .md-content { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+
+  body, .md-typeset { font-size: 14pt !important; line-height: 1.42 !important; }
+  .md-typeset p { margin: .35em 0 !important; }
+  .md-typeset ul, .md-typeset ol { margin: .3em 0 .3em 1.1em !important; }
+  .md-typeset li { margin: .12em 0 !important; }
+  .md-typeset hr { display: none; }
+
+  /* 課題分隔頁 */
+  #print-site-page section.print-page { break-before: page; }
+  #print-site-page section.print-page > h1, .md-typeset h1 {
+    font-size: 30pt !important; color: #00695c !important; font-weight: 700 !important;
+    text-align: center; margin: 90mm 0 0 !important; }
+  .md-typeset h1 + p.divider-note { text-align: center; color: #666; }
+
+  /* 每個概念一頁 */
+  .md-typeset h2 { break-before: page; page-break-before: always; font-size: 20pt !important; font-weight: 700 !important;
+    color: #00695c !important; border-bottom: 2pt solid #00897b; padding-bottom: 2pt; margin: 0 0 .4em !important; }
+  .md-typeset h3 { font-size: 15pt !important; font-weight: 700 !important; color: #00695c; margin: .55em 0 .2em !important; break-after: avoid; }
+
+  .md-typeset table:not([class]) { font-size: 12.5pt !important; display: table; width: 100%; border: 1pt solid #999; margin: .4em 0 !important; }
+  .md-typeset table:not([class]) td, .md-typeset table:not([class]) th { border: .5pt solid #bbb; padding: 3pt 6pt !important; line-height: 1.35; }
+  .md-typeset__scrollwrap, .md-typeset__table { overflow: visible !important; display: block; margin: 0 !important; }
+  .md-typeset tr { break-inside: avoid; }
+
+  .md-typeset .admonition { font-size: 12.5pt !important; box-shadow: none; border-width: 1pt; margin: .5em 0 !important; break-inside: avoid; }
+  .md-typeset .admonition-title { font-size: 12.5pt !important; padding-top: 2pt !important; padding-bottom: 2pt !important; }
+
+  /* 封面及目錄 */
+  .print-cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; text-align: center; break-after: page; }
+  .print-cover h1 { font-size: 32pt !important; color: #00695c; margin: 0 !important; }
+  .print-cover__sub { color: #555; letter-spacing: .1em; }
+  .print-cover__line { margin-top: 40mm; font-size: 13pt; }
+  #print-site-page .print-page-toc-title { margin: 0 0 6mm !important; font-size: 24pt !important; text-align: left; }
+  #print-site-page .print-page-toc-nav li { font-size: 14pt !important; }
+}
