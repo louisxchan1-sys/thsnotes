@@ -1,0 +1,38 @@
+site_name: HKDSE 旅遊與款待 概念卡
+docs_dir: concepts
+site_dir: site-concepts
+theme:
+  name: material
+  language: zh-TW
+extra_css:
+  - cards.css
+exclude_docs: |
+  check_pages.js
+plugins:
+  - print-site:
+      add_to_navigation: true
+      exclude:
+        - index.md
+      print_page_title: 列印全部概念卡
+      add_print_site_banner: false
+      add_table_of_contents: true
+      toc_title: 目錄
+      toc_depth: 1
+      add_full_urls: false
+      enumerate_headings: false
+      add_cover_page: true
+      cover_page_template: overrides/print_cover.tpl
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.mark
+  - pymdownx.superfences
+nav:
+  - 首頁: index.md
+  - 課題一 旅遊導論: t1-tourism.md
+  - 課題二 款待導論: t2-hospitality.md
+  - 課題三 地理名勝: t3-geography.md
+  - 課題四 客務關係及服務: t4-customer.md
+  - 課題五 趨勢及議題: t5-trends.md
